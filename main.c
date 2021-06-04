@@ -51,11 +51,64 @@ void FunkcjaLiniowa() {
     /* TODO - osoba2 */
 
     /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("%s\n" "%.2f" "%s", "\nPierwiastek wynosi : - ", wynik, "\n\n");
+    printf("%s\n" "%.2f" "%s", "\nPierwiastek wynosi : - ", "\n\n");
 }
 
 void FunkcjaKwadratowa() {
+{
 
-    /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("%s\n" "%.2f" "%s", "Pierwiastek wynosi: - ", wynik, "\n\n" );
+   float a,b, c;
+   float x, wynik1, wynik2;
+   float pierwiastek, delta;
+printf("%s \n","Podaj a ");
+if(scanf("%f",&a)==0)
+{
+
+    printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+}
+if (a==0)
+{
+     printf("to nie jest rownanie kwadratowe\n");
+        exit(EXIT_FAILURE);
+}
+printf("%s \n","Podaj b ");
+if(scanf("%f",&b)==0)
+{
+
+    printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+}
+printf("%s \n","Podaj c ");
+if(scanf("%f",&c)==0)
+{
+
+    printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+}
+delta =(b*b)-(4*a*c);
+pierwiastek= sqrt(delta);
+
+if (delta < 0)
+{
+printf("%s","Rownanie sprzeczne\n");
+printf(" %s %f","delta= ", delta );
+}
+if (delta == 0)
+{
+x=-b/(2*a);
+printf("%s %f","X wynosi",x);
+}
+if (delta > 0)
+{
+wynik1= (-b+pierwiastek)/(2*a);
+printf("X1 wynosi ");
+printf("%f", wynik1);
+wynik2= (-b-pierwiastek)/(2*a);
+printf("\nX2 wynosi ");
+printf("%f %s", wynik2, "\n\n");
+
+}
+}
+
 }

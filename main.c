@@ -47,15 +47,43 @@ int main() {
     return EXIT_SUCCESS;
 }
 
-void FunkcjaLiniowa() {
-    /* TODO - osoba2 */
 
-    /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("%s\n" "%.2f" "%s", "\nPierwiastek wynosi : - ", wynik, "\n\n");
+ void FunkcjaLiniowa ()
+{
+    float a,b,x;
+printf("%s \n","Podaj a ");
+if(scanf("%f",&a)==0)
+{
+
+    printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+}
+printf("%s \n","Podaj b ");
+if(scanf("%f",&b)==0)
+{
+
+    printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+}
+
+if ((a == 0) && (b == 0))
+{
+printf("%s","Rownanie tozsamosciowe");
+}
+else
+if (a == 0)
+{
+printf("%s","Rownanie sprzeczne");
+}
+else
+{
+x=-b/a;
+printf("%s\n" "%.2f"  "%s", "wynik rownania  - ", x,  "\n\n" );
+}
 }
 
 void FunkcjaKwadratowa() {
 
     /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("%s\n" "%.2f" "%s", "Pierwiastek wynosi: - ", wynik, "\n\n" );
+    printf("%s\n" "%.2f" "%s", "Pierwiastek wynosi: - ",  "\n\n" );
 }
